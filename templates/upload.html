@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Quote Win/Loss Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    {{ dropzone.load_css() }}
+</head>
+<body>
+    <div class="logo"><img src="{{ url_for('static', filename='img/eci_logo.jpg') }}" /></div>
+    <div class="center">
+        <div class="inner">
+            <h1>Quote Win/Loss Portal</h1>
+            <p>Upload a quote to view margin probability of win or loss</p>
+            {% if file_name %}<p class="highlight">You have uploaded {{ file_name }}</p>{% endif %}
+            {% if quote_probability %}<p class="hightlight">You have a {{ quote_probability }} probability of winning this quote</p>{% endif %}
+            {{ dropzone.create(action='/upload') }}
+            {{ dropzone.style('opacity: 0.6; background-color: #64b5f6;border: 3px solid #448AFF; margin: 0 5%; min-width: 500px; min-height: 350px; border-radius:15px; box-shadow: 0 0 2px 1px black inset; -webkit-box-shadow: 0 0 2px 1px black inset; -moz-box-shadow: 0 0 2px 1px black inset;') }}
+        </div>
+    </div>
+    {{ dropzone.load_js() }}
+    {{ dropzone.config(redirect_url=url_for('result')) }}
+</body>
+</html>

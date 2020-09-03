@@ -1,0 +1,41 @@
+html,body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.center {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+
+.inner {
+    height: 600px;
+    min-width: 620px;
+    margin: -20px 20px;
+    padding: 20px;
+    border: solid black 1px;
+    box-shadow: 1px 1px 1px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.hightlight {
+    font-weight: 500;
+    color: green;
+}
+
+.logo, .logo img {
+    float: left;
+    height: 170px;
+    width: 170px;
+}
+
+h1 {
+    padding-bottom: 20px;
+}
+
+p {
+    text-align: center;
+}
